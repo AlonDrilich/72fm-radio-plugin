@@ -1,0 +1,14 @@
+{
+  "name": "72fm-radio",
+  "displayName": "Internet Radio Stations (72FM)",
+  "version": "1.0.0",
+  "description": "Search 30,000+ live internet radio stations from the public-domain Radio Browser directory by name, country, genre or language, and get direct stream URLs.",
+  "author": {
+    "name": "Alon Drilich",
+    "url": "https://72fm.com"
+  },
+  "homepage": "https://72fm.com/developers",
+  "repository": "https://github.com/AlonDrilich/72fm-radio-plugin",
+  "license": "MIT",
+  "keywords": ["radio", "internet-radio", "streaming", "music", "radio-browser"]
+}
