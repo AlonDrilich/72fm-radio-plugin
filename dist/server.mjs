@@ -21524,13 +21524,13 @@ function toError(value) {
   return value instanceof Error ? value : new Error(String(value));
 }
 
-// server/server.js
+// src/server.js
 import { readFileSync } from "node:fs";
 
 // node_modules/@modelcontextprotocol/server/dist/index.mjs
 var DEFAULT_MAX_REQUEST_BODY_SIZE = 4 * 1024 * 1024;
 
-// server/radio-browser.js
+// src/radio-browser.js
 var USER_AGENT = "internet-radio-mcp/1.0 (+https://72fm.com)";
 var DEFAULT_MIRRORS = [
   "https://de1.api.radio-browser.info",
@@ -21781,7 +21781,7 @@ function timeoutFromEnv(raw = process.env.RADIO_BROWSER_TIMEOUT_MS) {
   return void 0;
 }
 
-// server/server.js
+// src/server.js
 var pkg = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 var SERVER_NAME = "internet-radio-mcp";
 var SERVER_VERSION = (
@@ -22159,7 +22159,7 @@ Use the internet-radio tools: map the request to genre tags (list_genres helps),
   return server;
 }
 
-// server/index.js
+// src/index.js
 var arg = process.argv[2];
 if (arg === "--version" || arg === "-v") {
   process.stdout.write(`${SERVER_VERSION}

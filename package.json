@@ -1,21 +1,11 @@
 {
   "name": "72fm-radio",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
-  "description": "Claude plugin: search internet radio stations and get stream URLs (Radio Browser data). By 72FM.",
+  "description": "Claude plugin: search internet radio stations and get stream URLs (Radio Browser data). By 72FM. Runs from the bundled dist/server.mjs; nothing is installed.",
   "type": "module",
   "license": "MIT",
   "engines": {
     "node": ">=20"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/server": "2.1.0",
-    "zod": "^4.2.0"
-  },
-  "scripts": {
-    "build": "esbuild server/index.js --bundle --platform=node --target=node20 --format=esm --banner:js=\"import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\" --outfile=dist/server.mjs --log-level=warning"
-  },
-  "devDependencies": {
-    "esbuild": "0.28.2"
   }
 }
