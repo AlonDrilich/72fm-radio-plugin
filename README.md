@@ -12,8 +12,8 @@ Radio Browser is a community-run, public-domain directory of radio stations. Sta
 
 Add the plugin from the Claude directory once it is listed. Until then, the same server runs on its own in Claude Code, Claude Desktop, Cursor or VS Code: see [internet-radio-mcp](https://github.com/AlonDrilich/internet-radio-mcp), for example `claude mcp add internet-radio -- npx -y github:AlonDrilich/internet-radio-mcp`.
 
-The plugin's server needs Node.js 20 or newer. Its three runtime packages (`@modelcontextprotocol/server`, its `core` package, and `zod`) are installed from the committed `package-lock.json` when the plugin is installed.
+The plugin's server needs Node.js 20 or newer. It runs from one self-contained file, `dist/server.mjs`, so nothing is installed when the plugin is installed. That file is built from `server/` and the committed `package-lock.json` with `npm ci && npm run build` (esbuild, no minification), and it is committed so that what runs is what you can read in this repository.
 
 ## Source and license
 
-The server source is in `server/`, readable and unminified. It is the same code as [AlonDrilich/internet-radio-mcp](https://github.com/AlonDrilich/internet-radio-mcp), which also runs standalone with `npx`. MIT licensed. Made by [72FM](https://72fm.com/developers), a free web radio player built on the same directory.
+The server source is in `server/`, readable and unminified; `dist/server.mjs` is the unminified bundle of that source and its two runtime packages (`@modelcontextprotocol/server` and `zod`). It is the same code as [AlonDrilich/internet-radio-mcp](https://github.com/AlonDrilich/internet-radio-mcp), which also runs standalone with `npx`. MIT licensed. Made by [72FM](https://72fm.com/developers), a free web radio player built on the same directory.

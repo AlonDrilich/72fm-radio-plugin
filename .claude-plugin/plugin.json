@@ -1,7 +1,7 @@
 {
   "name": "72fm-radio",
   "displayName": "Internet Radio Stations (72FM)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Search 30,000+ live internet radio stations from the public-domain Radio Browser directory by name, country, genre or language, and get direct stream URLs.",
   "icon": "./.claude-plugin/icon.png",
   "author": {
