@@ -4,7 +4,7 @@ This plugin lets Claude find live internet radio stations and hand you a working
 
 ## What it connects to
 
-The server makes outbound HTTPS GET requests, and only to the public Radio Browser API at `de1.api.radio-browser.info`, `de2.api.radio-browser.info` and `all.api.radio-browser.info` (it tries them in that order). The requests carry your search words and the User-Agent `internet-radio-mcp/1.0 (+https://72fm.com)`. Nothing else is sent: no files, no account details, no credentials, and the plugin needs none. It does not run shell commands, write files or read anything outside its own folder. Each result includes a `listen_url` on 72fm.com; that is only a link, and nothing contacts 72fm.com unless you open it.
+The server makes outbound HTTPS GET requests, and only to the public Radio Browser API at `de1.api.radio-browser.info`, `de2.api.radio-browser.info` and `all.api.radio-browser.info` (it tries them in that order). The requests carry your search words and the User-Agent `internet-radio-mcp/1.0 (+https://72fm.com)`. As with any web request, Radio Browser also sees your IP address; nothing else is sent: no files, no account details, no credentials, and the plugin needs none. (The `RADIO_BROWSER_MIRRORS` environment variable, if you set it yourself, replaces those three addresses with https ones you choose.) It does not run shell commands, write files or read anything outside its own folder. Each result includes a `listen_url` on 72fm.com; that is only a link, and nothing contacts 72fm.com unless you open it.
 
 Radio Browser is a community-run, public-domain directory of radio stations. Stations belong to their broadcasters; neither this plugin nor 72FM owns, hosts or curates them, and a listed stream can occasionally be offline.
 

@@ -1,6 +1,6 @@
 {
   "name": "72fm-radio",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "Claude plugin: search internet radio stations and get stream URLs (Radio Browser data). By 72FM. Runs from the bundled dist/server.mjs; nothing is installed.",
   "type": "module",
